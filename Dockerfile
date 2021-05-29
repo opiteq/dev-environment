@@ -47,7 +47,6 @@ RUN wget https://download-cf.jetbrains.com/idea/ideaIC-2021.1.1-no-jbr.tar.gz &&
 WORKDIR /opt/workspace/$user
 RUN chown -R $user:$user /opt/workspace/$user
 
-#RUN chmod -R 777 /opt/workspace/$user
 USER $user
 
 # expose necessary ports for testing your application
