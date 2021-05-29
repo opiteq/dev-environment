@@ -1,8 +1,8 @@
 FROM adoptopenjdk/openjdk11:alpine-slim
 
 ARG user=dev
-ARG uid=1000
-ARG gid=1000
+ARG uid=676
+ARG gid=676
 
 # update alpine
 RUN apk update && apk upgrade
