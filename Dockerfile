@@ -1,8 +1,8 @@
 FROM adoptopenjdk/openjdk11:alpine-slim
 
 ARG user=dev
-ARG uid=1000
-ARG gid=1000
+ARG uid=676
+ARG gid=676
 
 # update alpine
 RUN apk update && apk upgrade
@@ -47,7 +47,6 @@ RUN wget https://download-cf.jetbrains.com/idea/ideaIC-2021.1.1-no-jbr.tar.gz &&
 WORKDIR /opt/workspace/$user
 RUN chown -R $user:$user /opt/workspace/$user
 
-#RUN chmod -R 777 /opt/workspace/$user
 USER $user
 
 # expose necessary ports for testing your application
